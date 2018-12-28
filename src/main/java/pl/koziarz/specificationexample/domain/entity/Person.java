@@ -3,18 +3,19 @@ package pl.koziarz.specificationexample.domain.entity;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Child {
+public class Person {
 	private String name;
 	private int age;
 	private Set<Toy> favouriteToys = new HashSet<>();
 	
-	public Child(String name, int age) {
+	public Person(String name, int age, boolean isMarried) {
 		super();
 		this.name = name;
 		this.age = age;
+		this.isMarried = isMarried;
 	}
 
-	public Child() {
+	public Person() {
 	}
 	
 	public int getAge() {
@@ -43,7 +44,7 @@ public class Child {
 
 	@Override
 	public String toString() {
-		return "Child [name=" + name + ", age=" + age + ", favouriteToys=" + favouriteToys + "]";
+		return "Person [name=" + name + ", age=" + age + ", favouriteToys=" + favouriteToys + "]";
 	}
 	
 }
